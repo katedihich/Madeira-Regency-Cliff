@@ -5,6 +5,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { deleteCabin } from "../../services/apiCabins";
 import toast from "react-hot-toast";
 import CreateCabinForm from "./CreateCabinForm";
+
 import { useState } from "react";
 
 const TableRow = styled.div`
@@ -84,7 +85,7 @@ function CabinRow({ cabin }) {
           </button>
         </div>
       </TableRow>
-      {showForm && <CreateCabinForm cabintoEdit={cabin} />}
+      {showForm && <CreateCabinForm cabinToEdit={cabin} />}
     </>
   );
 }
