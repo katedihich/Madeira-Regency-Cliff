@@ -60,7 +60,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
       onSubmit={handleSubmit(onSubmit, onError)}
       type={onCloseModal ? "modal" : "regular"}
     >
-      <Heading>{isEditSession ? "Edit cabin" : "Add new cabin"}</Heading>
+      <Heading>{isEditSession ? "Edit a cabin" : "Create a new cabin"}</Heading>
       <FormRow label="Cabin name" error={errors?.name?.message}>
         <Input
           type="text"
@@ -138,7 +138,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
         >
           Cancel
         </Button>
-        <Button>{isEditSession ? "Edit cabin" : "Create new cabin"}</Button>
+        <Button>{isEditSession ? "Save" : "Create"}</Button>
       </FormRow>
     </Form>
   );
